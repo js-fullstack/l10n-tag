@@ -1,0 +1,29 @@
+{
+  "name": "l10n-tag",
+  "version": "0.0.0",
+  "description": "tagged template based on ES6.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-fullstack/l10n-tag.git"
+  },
+  "keywords": [
+    "l10n",
+    "i18n",
+    "tagged",
+    "template",
+    "string"
+  ],
+  "author": "shenyu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/js-fullstack/l10n-tag/issues"
+  },
+  "homepage": "https://github.com/js-fullstack/l10n-tag#readme",
+  "dependencies": {
+    "debug": "^2.2.0"
+  }
+}
