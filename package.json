@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/js-fullstack/l10n-tag#readme",
   "dependencies": {
-    "debug": "^2.2.0"
+    "debug": "^2.2.0",
+    "escape-regexp": "0.0.1"
   }
 }
