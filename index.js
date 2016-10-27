@@ -1,6 +1,5 @@
 const debug = require('debug')('l10n-tag');
 const escape = require("escape-regexp");
-const REGEXP = /\$\{(\d+)\}/g;
 const PREFIX = '${';
 const SURFFIX = '}';
 
