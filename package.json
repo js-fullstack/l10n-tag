@@ -4,7 +4,7 @@
   "description": "tagged template based on ES6.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "DEBUG=l10n-tag;mocha test.js"
   },
   "repository": {
     "type": "git",

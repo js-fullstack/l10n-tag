@@ -2,4 +2,29 @@
 
 tagged template based on es6. Inspired by [i18n-tag](https://github.com/chicoxyzzy/i18n-tag).
 
+## Sample
+
+res_en.json;
+```
+{
+    "HELLO ${0}, ${1}.": "hello ${0}! the content is '${1}'."
+}
+
+```
+
+main.js
+```
+const l10nTag = require('l10n-tag');
+const en = require('res_en.json');
+
+const l10n = l10nTag(en);
+
+let name = 'foo';
+let content = 'test template string';
+
+let message = l10n`HELLO ${name}, ${content}.`;
+
+console.log(message); // "hello foo! the content is 'test template string'." will be output.
+
+```
 
