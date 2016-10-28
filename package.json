@@ -1,6 +1,6 @@
 {
   "name": "l10n-tag",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "tagged template based on ES6.",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,8 @@
   "dependencies": {
     "debug": "^2.2.0",
     "escape-regexp": "0.0.1"
+  },
+  "devDependencies": {
+    "trace-step": "^1.0.1"
   }
 }
