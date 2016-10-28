@@ -42,7 +42,11 @@ const l10n = l10nTag(en, options);
 `options.cb` is callback, it will be called if l10n cannot found key, default behavior is output error by debug.
 ```
 const log = ...;
-const l10n = l10nTag(en, (cb(key, inputs, values) => log.warn(`${key} was missing.`)));
+const l10n = l10nTag(en, { 
+	cb(key, inputs, values) {
+		log.warn(`${key} was missing.`);
+	}
+});
 ```
 
 #### options.prefix, options.surffix
