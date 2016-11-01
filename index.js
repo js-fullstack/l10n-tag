@@ -14,10 +14,11 @@ module.exports = (l10nMap = {},options = {}) => {
     debug(`prefix: ${prefix}, surffix: ${surffix}, capturer regexp: ${regexp.source}`);
     return (inputs, ...values) => {
         const key = inputs.slice(1).reduce((pre, curr, index) => `${pre}${prefix}${index}${surffix}${curr}`, inputs[0]);
+        let fallback;
         if(!l10nMap[key]) {
-            cb(key, inputs, values);
+           fallback = cb(key, inputs, values);
         }
-        const template = l10nMap[key] || key;
+        const template = l10nMap[key] ||fallback  || key;
         return template.replace(regexp, (_,index) => values[index]);
     };
 }

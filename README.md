@@ -42,12 +42,23 @@ const l10n = l10nTag(en, options);
 `options.cb` is callback, it will be called if l10n cannot found key, default behavior is output error by debug.
 ```
 const log = ...;
-const l10n = l10nTag(en, { 
+const l10n = l10nTag(en, {
 	cb(key, inputs, values) {
 		log.warn(`${key} was missing.`);
 	}
 });
 ```
+
+`options.cb` can also return default message key.
+```
+const log = ...;
+const l10n = l10nTag(en, {
+	cb(key, inputs, values) {
+		return 'some message';
+	}
+});
+```
+
 
 #### options.prefix, options.surffix
 `options.prefix` and `options.surffix` can be used when need define prefix and surffix of template key, default value is `${` and `}`.
